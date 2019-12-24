@@ -1,0 +1,32 @@
+{
+  "name": "mern",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "serve": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mirzaevra/mern.git"
+  },
+  "keywords": [
+    "mern",
+    "react",
+    "express",
+    "mongo",
+    "node"
+  ],
+  "author": "mirzaev.r.a",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mirzaevra/mern/issues"
+  },
+  "homepage": "https://github.com/mirzaevra/mern#readme",
+  "dependencies": {
+    "config": "^3.2.4",
+    "express": "^4.17.1",
+    "mongoose": "^5.8.3"
+  }
+}
