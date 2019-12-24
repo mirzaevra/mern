@@ -1,22 +1,25 @@
-import express from 'express'
-import config from  'config'
-import mongoose from 'mongoose'
+const express = require('express')
+const config = require('config')
+const mongoose = require('mongoose')
 
 const app = express()
 
 const PORT = config.get('port') || 5000
 
-const start = async () => {
+async function start() {
     try {
-        await mongoose.connect(config.get('mongoUri'))
+        await mongoose.connect(config.get('mongoUri'), {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            useCreateIndex: true
+        })
+        app.listen(PORT, () => console.log(`started... on port ${PORT}`))
     } catch (e) {
         console.log('Server error', e.measure)
         process.exit(1)
     }
 }
 
-start();
-
-app.listen(PORT, () => console.log(`started... on port ${PORT}`))
+start()
 
 
