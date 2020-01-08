@@ -1,9 +1,10 @@
 import React from 'react'
+import 'materialize-css'
 
 function App() {
     return (
-        <div>
-            <h1>some title</h1>
+        <div className="container">
+            <h1>Some title</h1>
         </div>
     )
 }
